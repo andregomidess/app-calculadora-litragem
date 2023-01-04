@@ -39,8 +39,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calc_qtd_litros(View view){
-        if (editDiametro.getText().toString().isEmpty() || editCm.getText().toString().isEmpty()){
-            Toast.makeText(getApplicationContext(), "Preencha os campos!", Toast.LENGTH_SHORT).show();
+        if (editDiametro.getText().toString().isEmpty()){
+            Toast.makeText(getApplicationContext(), "Preencha o campo dos diâmetros!", Toast.LENGTH_SHORT).show();
+        } else if (editCm.getText().toString().isEmpty()){
+            Toast.makeText(getApplicationContext(), "Preencha o campo dos cemtímetros!", Toast.LENGTH_SHORT).show();
         } else {
             double diametro = Double.parseDouble(editDiametro.getText().toString());
             double cm = Double.parseDouble(editCm.getText().toString());
@@ -55,16 +57,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calc_qtd_cm(View view){
-        if (editDiametro.getText().toString().isEmpty() || editLitros.getText().toString().isEmpty()){
-            Toast.makeText(getApplicationContext(), "Preencha os campos!", Toast.LENGTH_SHORT).show();
+        if (editDiametro.getText().toString().isEmpty()){
+            Toast.makeText(getApplicationContext(), "Preencha o campo dos diâmetros!", Toast.LENGTH_SHORT).show();
+        } else if (editLitros.getText().toString().isEmpty()){
+            Toast.makeText(getApplicationContext(), "Preencha o campo dos litros!", Toast.LENGTH_SHORT).show();
         } else {
             double diametro = Double.parseDouble(editDiametro.getText().toString());
             double litros = Double.parseDouble(editLitros.getText().toString());
             double raio = diametro/2;
             double area_base = (raio*raio) * 3.14;
-            double cada_cm = area_base/1000;
-            double cada_L= 1/cada_cm;
-            double qtdCm = litros*cada_L;
+            double qtdCm = (litros*1000)/area_base;
             textCm.setText(String.format("%.2fcm", qtdCm));
         }
 
