@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:paddingRight="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:lineSpacingExtra="8sp"
+        android:padding="15dp"
+        android:text="CALCULADORA DE LITRAGEM"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:verticalScrollbarPosition="defaultPosition" />
+
+    <EditText
+        android:id="@+id/editDiametro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Informe o diâmetro:"
+        android:inputType="numberDecimal"
+        android:padding="15dp"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editCm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Informe cm:"
+        android:inputType="numberDecimal"
+        android:padding="15dp"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textLitros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="QUANTIDADE DE LITROS:"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/botao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="calc_qtd_litros"
+        android:padding="15dp"
+        android:text="CALCULAR QTD. LITROS"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editLitros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Informe Litros:"
+        android:inputType="numberDecimal"
+        android:padding="15dp"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textCm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="MEDIDAS EM CM:"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="calc_qtd_cm"
+        android:padding="15dp"
+        android:text="CALCULAR MEDIDA EM CM"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="220dp"
+        android:layout_height="140dp"
+        android:padding="20dp"
+        android:scaleType="centerInside"
+        android:translationX="70dp"
+        android:translationY="-20dp"
+        app:srcCompat="@drawable/g1087" />
+</LinearLayout>
